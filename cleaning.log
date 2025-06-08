@@ -1,0 +1,30 @@
+2025-05-24 16:28:41,127 - INFO - Chargement du fichier dataset_data_cleaning_5000_rows.csv
+2025-05-24 16:28:41,329 - INFO - 🚀 Début du pipeline de nettoyage
+2025-05-24 16:28:41,329 - INFO - 🔍 Aperçu initial du dataset
+2025-05-24 16:28:41,329 - INFO - Nombre de lignes : 5100
+2025-05-24 16:28:41,329 - INFO - Noms de colonnes : ['id', 'first_name', 'last_name', 'email', 'birth_year', 'country', 'gender', 'income']
+2025-05-24 16:28:41,330 - INFO - Colonnes avec valeurs nulles :
+shape: (1, 8)
+┌─────┬────────────┬───────────┬───────┬────────────┬─────────┬────────┬────────┐
+│ id  ┆ first_name ┆ last_name ┆ email ┆ birth_year ┆ country ┆ gender ┆ income │
+│ --- ┆ ---        ┆ ---       ┆ ---   ┆ ---        ┆ ---     ┆ ---    ┆ ---    │
+│ u32 ┆ u32        ┆ u32       ┆ u32   ┆ u32        ┆ u32     ┆ u32    ┆ u32    │
+╞═════╪════════════╪═══════════╪═══════╪════════════╪═════════╪════════╪════════╡
+│ 0   ┆ 51         ┆ 51        ┆ 51    ┆ 531        ┆ 51      ┆ 1077   ┆ 0      │
+└─────┴────────────┴───────────┴───────┴────────────┴─────────┴────────┴────────┘
+2025-05-24 16:28:41,330 - INFO - ❌ Suppression des lignes avec données critiques manquantes
+2025-05-24 16:28:41,332 - INFO - 1482 lignes supprimées (valeurs nulles)
+2025-05-24 16:28:41,333 - INFO - 🧹 Suppression des doublons
+2025-05-24 16:28:41,334 - INFO - 56 doublons supprimés
+2025-05-24 16:28:41,334 - INFO - ✍️ Nettoyage des noms (first_name, last_name)
+2025-05-24 16:28:41,336 - INFO - 📧 Validation des emails
+2025-05-24 16:28:41,341 - INFO - 0 lignes avec emails invalides supprimées
+2025-05-24 16:28:41,342 - INFO - 📆 Nettoyage des années de naissance
+2025-05-24 16:28:41,343 - INFO - 0 lignes avec birth_year invalide supprimées
+2025-05-24 16:28:41,344 - INFO - 💰 Nettoyage des revenus (détection d’outliers)
+2025-05-24 16:28:41,345 - INFO - 23 outliers supprimés selon IQR
+2025-05-24 16:28:41,345 - INFO - 🌍 Standardisation des champs country et gender
+2025-05-24 16:28:41,347 - INFO - 1782 lignes avec gender invalide supprimées
+2025-05-24 16:28:41,347 - INFO - 💾 Sauvegarde du fichier nettoyé dans cleaned_data.csv
+2025-05-24 16:28:41,349 - INFO - ✅ Fichier sauvegardé avec succès
+2025-05-24 16:28:41,350 - INFO - 🏁 Pipeline terminé
